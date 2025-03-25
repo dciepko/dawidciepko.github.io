@@ -1,0 +1,94 @@
+.header {
+  z-index: 5;
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  background-color: #3498db;
+  overflow: hidden;
+  z-index: 5;
+  /* clip-path: polygon(0 0, 100% 0, 100% 55vh, 0 100%); */
+}
+
+.header .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 3rem;
+}
+
+.header p {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+.waveContainer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  /* background-color: white; */
+  /* background-image: linear-gradient(
+      to right,
+      rgb(216, 212, 212) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgb(216, 212, 212) 1px, transparent 1px);
+  background-size: 20px 20px; */
+}
+
+.waveContainer svg {
+  position: relative;
+  display: block;
+  width: calc(149% + 1.3px);
+  height: 125px;
+  transform: rotateY(180deg);
+}
+
+.waveContainer .fillWave {
+  fill: white;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 3rem;
+  opacity: 0;
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+.header p {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  opacity: 0;
+  animation: slideInRight 1s ease-out forwards;
+  animation-delay: 0.3s;
+}

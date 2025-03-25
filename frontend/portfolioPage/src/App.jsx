@@ -1,28 +1,20 @@
-import { useRef, useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import Film from "/videos/Film.mp4";
 import "./App.css";
+import Header from "./components/Header/Header";
+import ChooseSection from "./components/ChooseSection/ChooseSection";
 
 function App() {
-  const [count, setCount] = useState(0);
-  const videoRef = useRef(null);
-  const [speed, setSpeed] = useState(1);
-
-  const changeSpeed = (event) => {
-    const newSpeed = parseFloat(event.target.value);
-    setSpeed(newSpeed);
-    if (videoRef.current) {
-      videoRef.current.playbackRate = newSpeed;
-    }
-  };
-
   return (
-    <>
-      <div></div>
-      <h1>Cześć Agata</h1>
-      <div className="card">
-        <video ref={videoRef} width="560" controls>
+    <div className="mainAppContainer">
+      <Header />
+      <ChooseSection />
+    </div>
+  );
+}
+
+export default App;
+
+{
+  /* <video ref={videoRef} width="560" controls>
           <source src={Film} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -34,13 +26,16 @@ function App() {
           step="0.1"
           value={speed}
           onChange={changeSpeed}
-        />
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  );
+        /> */
 }
+// const [count, setCount] = useState(0);
+// const videoRef = useRef(null);
+// const [speed, setSpeed] = useState(1);
 
-export default App;
+// const changeSpeed = (event) => {
+//   const newSpeed = parseFloat(event.target.value);
+//   setSpeed(newSpeed);
+//   if (videoRef.current) {
+//     videoRef.current.playbackRate = newSpeed;
+//   }
+// };
