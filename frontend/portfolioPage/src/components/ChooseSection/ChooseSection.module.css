@@ -8,19 +8,32 @@
 }
 
 .buttonsSection button {
-  padding: 0.7rem 1.5rem;
-  font-size: 1.2rem;
-  margin: 0.8rem;
+  font-family: "Sarala", sans-serif;
+  padding: 1rem 1.7rem;
+  font-size: 1.8rem;
+  margin: 1rem;
   cursor: pointer;
   border: none;
   background-color: #3498db;
   color: white;
   border-radius: 3rem;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .buttonsSection button:hover {
   background-color: #2980b9;
+  transform: scale(1.1);
+}
+
+.buttonsSection button:active {
+  transform: scale(0.95);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.active {
+  background-color: #2980b9;
+  box-shadow: 0 4px 10px rgba(41, 128, 185, 0.6);
 }
 
 .content {

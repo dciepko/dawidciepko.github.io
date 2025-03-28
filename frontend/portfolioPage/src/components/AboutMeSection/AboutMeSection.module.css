@@ -1,0 +1,98 @@
+.aboutMeContainer {
+  padding: 2rem;
+  margin: 2rem;
+  background-color: #3498db;
+  color: white;
+  border-radius: 3rem;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+p {
+  font-size: 1.2rem;
+  text-align: justify;
+  text-align-last: center;
+}
+
+.skillsContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.skillItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skillName {
+  font-size: 1.2rem;
+}
+
+.skillLevel {
+  display: flex;
+}
+
+.filledDot {
+  width: 8px;
+  height: 8px;
+  margin-right: 4px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.emptyDot {
+  width: 8px;
+  height: 8px;
+  margin-right: 4px;
+  background-color: #3498db;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.contactLink {
+  color: #2980b9;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.contactLink:hover {
+  color: #1c6691;
+}
+
+.scaleButton {
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 1.2rem;
+}
+
+.scaleButton:hover {
+  background-color: #2980b9;
+}
+
+.scaleDescription {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.scaleDescription p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.scaleDescription strong {
+  display: block;
+  margin-bottom: 1rem;
+}

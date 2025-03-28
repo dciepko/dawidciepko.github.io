@@ -5,7 +5,7 @@ const Header = () => {
     <header className={classes.header}>
       <div className={classes.content}>
         <h1>Portfolio</h1>
-        <p>Welcome to my personal website</p>
+        <p>Dawid Ciepko</p>
       </div>
       <div className={classes.waveContainer}>
         <svg

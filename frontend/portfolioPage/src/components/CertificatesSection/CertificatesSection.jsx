@@ -11,6 +11,7 @@ const CertificatesSection = () => {
           title={cert.title}
           author={cert.author}
           file={cert.file}
+          description={cert.description}
         />
       ))}
     </div>

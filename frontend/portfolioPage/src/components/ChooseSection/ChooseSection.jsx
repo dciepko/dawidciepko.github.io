@@ -1,54 +1,50 @@
-import { useState, useRef } from "react";
-import classes from "./ChooseSection.module.css"; // Importujemy klasy z CSS Modules
+import { useState, useRef, useEffect } from "react";
+import classes from "./ChooseSection.module.css";
 import ProjectsSection from "../ProjectsSection/ProjectsSection";
 import CertificatesSection from "../CertificatesSection/CertificatesSection";
+import AboutMeSection from "../AboutMeSection/AboutMeSection";
 
 const ChooseSection = () => {
   const [activeTab, setActiveTab] = useState("projekty");
-
-  // Dodajemy referencje do sekcji
   const projectsRef = useRef(null);
   const certificatesRef = useRef(null);
   const aboutRef = useRef(null);
+  const isFirstRender = useRef(true);
 
-  // Funkcja przewijania do wybranej sekcji
-  const scrollToSection = (section) => {
-    if (section === "projekty" && projectsRef.current) {
-      projectsRef.current.scrollIntoView({ behavior: "smooth" });
-    } else if (section === "certyfikaty" && certificatesRef.current) {
-      certificatesRef.current.scrollIntoView({ behavior: "smooth" });
-    } else if (section === "o mnie" && aboutRef.current) {
-      aboutRef.current.scrollIntoView({ behavior: "smooth" });
+  useEffect(() => {
+    if (isFirstRender.current) {
+      console.log("weszlo");
+      isFirstRender.current = false;
+      return;
+    } else {
+      if (activeTab === "projekty" && projectsRef.current) {
+        projectsRef.current.scrollIntoView({ behavior: "smooth" });
+      } else if (activeTab === "certyfikaty" && certificatesRef.current) {
+        certificatesRef.current.scrollIntoView({ behavior: "smooth" });
+      } else if (activeTab === "o mnie" && aboutRef.current) {
+        aboutRef.current.scrollIntoView({ behavior: "smooth" });
+      }
     }
-  };
+  }, [activeTab]);
 
   return (
     <>
       <div className={classes.buttonsSection}>
         <button
           className={activeTab === "projekty" ? classes.active : ""}
-          onClick={() => {
-            setActiveTab("projekty");
-            scrollToSection("projekty");
-          }}
+          onClick={() => setActiveTab("projekty")}
         >
           Projekty
         </button>
         <button
           className={activeTab === "certyfikaty" ? classes.active : ""}
-          onClick={() => {
-            setActiveTab("certyfikaty");
-            scrollToSection("certyfikaty");
-          }}
+          onClick={() => setActiveTab("certyfikaty")}
         >
           Certyfikaty
         </button>
         <button
           className={activeTab === "o mnie" ? classes.active : ""}
-          onClick={() => {
-            setActiveTab("o mnie");
-            scrollToSection("o mnie");
-          }}
+          onClick={() => setActiveTab("o mnie")}
         >
           O mnie
         </button>
@@ -60,16 +56,14 @@ const ChooseSection = () => {
             <ProjectsSection />
           </div>
         )}
-
         {activeTab === "certyfikaty" && (
           <div className={classes.contentSection} ref={certificatesRef}>
             <CertificatesSection />
           </div>
         )}
-
         {activeTab === "o mnie" && (
           <div className={classes.contentSection} ref={aboutRef}>
-            {/* Sekcja "O mnie" - dodaj zawartość */}
+            <AboutMeSection />{" "}
           </div>
         )}
       </div>

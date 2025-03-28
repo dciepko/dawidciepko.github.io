@@ -1,3 +1,8 @@
+h2 {
+  font-size: 2.5rem;
+  font-family: "Sarala", sans-serif;
+}
+
 .videoAndDescriptionContainer {
   display: flex;
   justify-content: space-around;
@@ -6,6 +11,7 @@
   color: white;
   padding: 1.5rem;
   border-radius: 3rem;
+  font-size: 1.2rem;
 }
 
 .descriptionContainer {
@@ -13,4 +19,10 @@
   flex-direction: column;
   justify-content: space-around;
   padding: 2rem;
+}
+
+.description p {
+  text-align: justify;
+  text-align-last: center;
+  line-height: 1.3;
 }

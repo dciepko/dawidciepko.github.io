@@ -1,6 +1,7 @@
 .certificateElement {
   display: flex;
-  width: 80%;
+  width: 100%;
+  flex-direction: column;
   justify-content: flex-start;
   margin: 1.5rem 0;
   background-color: #3498db;
@@ -8,10 +9,35 @@
   border-radius: 2rem;
 }
 
+.mainPart {
+  display: flex;
+  border-bottom: white dotted 1px;
+}
+
 .certificateInfo {
   flex: 1;
+  padding: 1rem;
+  font-size: 1.3rem;
 }
 
 .certificateLink {
   flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.certificateLink a {
+  font-size: 1.5rem;
+
+  color: beige;
+}
+
+.descritpionPart {
+  padding: 1rem 2rem;
+}
+
+.descritpionPart p {
+  text-align: left;
+  font-size: 1.2rem;
 }
