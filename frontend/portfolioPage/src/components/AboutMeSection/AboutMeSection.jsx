@@ -78,7 +78,6 @@ function AboutMeSection() {
       )}
       <h1>Kontakt</h1>
       <p>E-mail: dciepko17@gmail.com</p>
-      <p>GitHub: github.com/example</p>
     </div>
   );
 }

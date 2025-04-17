@@ -26,6 +26,11 @@ const ProjectElement = ({ project }) => {
             <h4>Technologie:</h4>
             <p> {project.technologies.join(" • ")} </p>
           </span>
+          <span>
+            <h4>
+              <a href={project.github}>Repozytorium</a>
+            </h4>
+          </span>
         </span>
       </span>
     </div>

@@ -15,6 +15,7 @@ const Projects = [
       "Football-API",
     ],
     video: "a8zGxhlR4ys",
+    github: "https://github.com/dciepko/FootApp",
   },
   {
     title: "Project Management App",
@@ -30,6 +31,7 @@ const Projects = [
       "MySQL",
     ],
     video: "LBZHz-E95N0",
+    github: "https://github.com/dciepko/ProjectManagementApp",
   },
   {
     title: "PawfectMatch",
@@ -45,6 +47,7 @@ const Projects = [
       "Midjourney",
     ],
     video: "MXKbzKEOZO8",
+    github: "https://github.com/dciepko/PawfectMatch",
   },
 ];
 

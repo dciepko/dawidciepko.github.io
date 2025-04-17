@@ -5,7 +5,7 @@ import CertificatesSection from "../CertificatesSection/CertificatesSection";
 import AboutMeSection from "../AboutMeSection/AboutMeSection";
 
 const ChooseSection = () => {
-  const [activeTab, setActiveTab] = useState("projekty");
+  const [activeTab, setActiveTab] = useState("");
   const projectsRef = useRef(null);
   const certificatesRef = useRef(null);
   const aboutRef = useRef(null);
@@ -18,6 +18,7 @@ const ChooseSection = () => {
       return;
     } else {
       if (activeTab === "projekty" && projectsRef.current) {
+        console.log("weszlo projekty");
         projectsRef.current.scrollIntoView({ behavior: "smooth" });
       } else if (activeTab === "certyfikaty" && certificatesRef.current) {
         certificatesRef.current.scrollIntoView({ behavior: "smooth" });
@@ -49,24 +50,31 @@ const ChooseSection = () => {
           O mnie
         </button>
       </div>
-
-      <div className={classes.content}>
-        {activeTab === "projekty" && (
+      {isFirstRender.current ? (
+        <div className={classes.content}>
           <div className={classes.contentSection} ref={projectsRef}>
             <ProjectsSection />
           </div>
-        )}
-        {activeTab === "certyfikaty" && (
-          <div className={classes.contentSection} ref={certificatesRef}>
-            <CertificatesSection />
-          </div>
-        )}
-        {activeTab === "o mnie" && (
-          <div className={classes.contentSection} ref={aboutRef}>
-            <AboutMeSection />{" "}
-          </div>
-        )}
-      </div>
+        </div>
+      ) : (
+        <div className={classes.content}>
+          {activeTab === "projekty" && (
+            <div className={classes.contentSection} ref={projectsRef}>
+              <ProjectsSection />
+            </div>
+          )}
+          {activeTab === "certyfikaty" && (
+            <div className={classes.contentSection} ref={certificatesRef}>
+              <CertificatesSection />
+            </div>
+          )}
+          {activeTab === "o mnie" && (
+            <div className={classes.contentSection} ref={aboutRef}>
+              <AboutMeSection />{" "}
+            </div>
+          )}
+        </div>
+      )}
     </>
   );
 };

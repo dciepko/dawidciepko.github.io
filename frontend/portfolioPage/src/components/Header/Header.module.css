@@ -39,6 +39,7 @@
   width: 100%;
   overflow: hidden;
   line-height: 0;
+  border-bottom: white 2rem solid;
 }
 
 .waveContainer svg {

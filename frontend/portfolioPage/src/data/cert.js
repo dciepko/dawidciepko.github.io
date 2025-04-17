@@ -50,7 +50,7 @@ const Certificates = [
   {
     title:
       "Dostępność cyfrowa. Kurs video. Wprowadzenie do tematyki i wytycznych WCAG 2.1",
-    author: "Platforma Biblio",
+    author: "Tomasz Pluta, Michał Wiktor Żmijewski",
     file: "Certyfikat_DotepnoscCyfrowa1.pdf",
     description:
       "Kurs wprowadza w tematykę dostępności cyfrowej i omawia kluczowe wytyczne WCAG 2.1 dotyczące projektowania dostępnych stron internetowych.",
@@ -58,7 +58,7 @@ const Certificates = [
   {
     title:
       "Dostępność cyfrowa. Kurs video. Narzędzie walidacyjne i tworzenie dostępnych treści",
-    author: "Platforma Biblio",
+    author: "Tomasz Pluta, Michał Wiktor Żmijewski",
     file: "Certyfikat_DotepnoscCyfrowa2.pdf",
     description:
       "Omówione zostały narzędzia do walidacji dostępności stron internetowych oraz metody tworzenia treści zgodnych ze standardami WCAG.",
@@ -66,7 +66,7 @@ const Certificates = [
   {
     title:
       "Dostępność cyfrowa. Kurs video. Dobre praktyki tworzenia dostępnych stron i poprawne stosowanie atrybutów ARIA",
-    author: "Platforma Biblio",
+    author: "Tomasz Pluta, Michał Wiktor Żmijewski",
     file: "Certyfikat_DotepnoscCyfrowa3.pdf",
     description:
       "Kurs przedstawia dobre praktyki w zakresie dostępności oraz poprawne stosowanie atrybutów ARIA w projektowaniu interfejsów użytkownika.",
@@ -74,7 +74,7 @@ const Certificates = [
   {
     title:
       "UML. Kurs video. Projektowanie diagramów i modelowanie systemów w teorii i praktyce",
-    author: "Platforma Biblio",
+    author: "Artur Olszczyński",
     file: "Certyfikat_UML.pdf",
     description:
       "Materiał obejmuje zasady modelowania systemów z wykorzystaniem UML oraz projektowanie różnych typów diagramów w analizie i projektowaniu oprogramowania.",
